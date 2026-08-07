@@ -2,7 +2,7 @@ prometheus:
   prometheusSpec:
     retention: 15d
     nodeSelector:
-      kubernetes.io/hostname: monitoring-node
+      kubernetes.io/hostname: monitoring
     storageSpec:
       volumeClaimTemplate:
         spec:
@@ -21,7 +21,7 @@ prometheus:
 
 grafana:
   nodeSelector:
-    kubernetes.io/hostname: monitoring-node
+    kubernetes.io/hostname: monitoring
   persistence:
     enabled: true
     storageClassName: local-path
@@ -34,7 +34,7 @@ grafana:
 alertmanager:
   alertmanagerSpec:
     nodeSelector:
-      kubernetes.io/hostname: monitoring-node
+      kubernetes.io/hostname: monitoring
     storage:
       volumeClaimTemplate:
         spec:

@@ -18,10 +18,10 @@ spec:
 
     spec:
       nodeSelector:
-        kubernetes.io/hostname: work-node-1
+        kubernetes.io/hostname: worker-node
       containers:
         - name: frontend
-          image: divaypratap/java-frontend:v1
+          image: maniprem28/java-frontend:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 80
