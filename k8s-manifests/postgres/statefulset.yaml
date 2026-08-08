@@ -18,7 +18,7 @@ spec:
 
     spec:
       nodeSelector:
-        kubernetes.io/hostname: worker-node-2
+        kubernetes.io/hostname: worker-node-db
 
       containers:
         - name: postgres
