@@ -4,20 +4,16 @@ metadata:
   name: banking-ingress
   namespace: banking
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/enable-cors: "true"
     nginx.ingress.kubernetes.io/cors-allow-origin: "http://bank.nandlaltools.in"
     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT, DELETE, OPTIONS"
     nginx.ingress.kubernetes.io/cors-allow-headers: "Content-Type, Authorization"
     nginx.ingress.kubernetes.io/cors-allow-credentials: "false"
-
-
-
-
-
 spec:
   ingressClassName: nginx
+
   rules:
+    # Frontend
     - host: bank.nandlaltools.in
       http:
         paths:
@@ -29,6 +25,7 @@ spec:
                 port:
                   number: 80
 
+    # Backend API
     - host: api.bank.nandlaltools.in
       http:
         paths:
