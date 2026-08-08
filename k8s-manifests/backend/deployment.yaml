@@ -52,11 +52,11 @@ spec:
               value: "*"
           resources:
             requests:
-              memory: "128Mi"
-              cpu: "100m"
+              memory: "250"
+              cpu: "512"
             limits:
-              memory: "256Mi"
-              cpu: "250m"   
+              memory: "500m"
+              cpu: "1Gi"   
           
           readinessProbe:
             httpGet:
