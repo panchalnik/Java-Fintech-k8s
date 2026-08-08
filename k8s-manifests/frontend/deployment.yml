@@ -21,7 +21,7 @@ spec:
         kubernetes.io/hostname: worker-node
       containers:
         - name: frontend
-          image: maniprem28/java-frontend:latest
+          image: maniprem28/fintech-frontend:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
