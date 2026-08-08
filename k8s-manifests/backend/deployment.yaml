@@ -18,7 +18,7 @@ spec:
 
     spec:
       nodeSelector:
-        kubernetes.io/hostname: worker-node
+        kubernetes.io/hostname: worker-node-db
       containers:
         - name: backend
           image: maniprem28/java-backend:latest
